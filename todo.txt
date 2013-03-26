@@ -1,0 +1,10 @@
+- data table logic
+    - column width
+- add server logic
+- test tabs logic
+- verify connection logic (dropped connections killing the application)
+- create ppa packaging
+    1. create a pypi distribution: http://guide.python-distribute.org/creation.html
+    2. 
+- create about box
+

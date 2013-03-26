@@ -1,0 +1,125 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ssqb.ui'
+#
+# Created: Mon Mar 25 11:11:41 2013
+#      by: PyQt4 UI code generator 4.9.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    _fromUtf8 = lambda s: s
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(1048, 512)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.gridLayout_2 = QtGui.QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
+        self.widget = QtGui.QWidget(self.centralwidget)
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.gridLayout = QtGui.QGridLayout(self.widget)
+        self.gridLayout.setMargin(0)
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.horizontalLayout = QtGui.QHBoxLayout()
+        self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
+        self.list = QtGui.QListWidget(self.widget)
+        self.list.setObjectName(_fromUtf8("list"))
+        self.horizontalLayout.addWidget(self.list)
+        self.verticalLayout_2 = QtGui.QVBoxLayout()
+        self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
+        self.tab = QtGui.QTabWidget(self.widget)
+        self.tab.setTabsClosable(True)
+        self.tab.setObjectName(_fromUtf8("tab"))
+
+        self.tab_1 = QtGui.QWidget()
+        self.tab_1.setObjectName(_fromUtf8("tab_1"))
+        self.tab_verticalLayout = QtGui.QVBoxLayout(self.tab_1)
+        
+        self.query_field = QtGui.QPlainTextEdit(self.tab_1)
+        self.query_field.setGeometry(QtCore.QRect(0, 0, 751, 161))
+        self.query_field.viewport().setProperty("cursor", QtGui.QCursor(QtCore.Qt.IBeamCursor))
+        self.query_field.setObjectName(_fromUtf8("query_field"))        
+        self.tab_verticalLayout.addWidget(self.query_field)
+        self.tab_1.setLayout(self.tab_verticalLayout)
+        self.tab.addTab(self.tab_1, _fromUtf8(""))
+        self.verticalLayout_2.addWidget(self.tab)
+        self.horizontalLayout_5 = QtGui.QHBoxLayout()
+        self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
+        self.clear_button = QtGui.QPushButton(self.widget)
+        self.clear_button.setObjectName(_fromUtf8("clear_button"))
+        self.horizontalLayout_5.addWidget(self.clear_button)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_5.addItem(spacerItem)
+        self.new_button = QtGui.QPushButton(self.widget)
+        self.new_button.setObjectName(_fromUtf8("new_button"))
+        self.horizontalLayout_5.addWidget(self.new_button)
+        self.query_button = QtGui.QPushButton(self.widget)
+        self.query_button.setObjectName(_fromUtf8("query_button"))
+        self.horizontalLayout_5.addWidget(self.query_button)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_5)
+        self.horizontalLayout.addLayout(self.verticalLayout_2)
+        self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.widget, 0, 0, 1, 1)
+        self.result_table = QtGui.QTableWidget(self.centralwidget)
+        self.result_table.setObjectName(_fromUtf8("result_table"))
+        self.result_table.setColumnCount(0)
+        self.result_table.setRowCount(0)
+        self.gridLayout_2.addWidget(self.result_table, 1, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtGui.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1048, 25))
+        self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuFile = QtGui.QMenu(self.menubar)
+        self.menuFile.setObjectName(_fromUtf8("menuFile"))
+        self.servers_menu = QtGui.QMenu(self.menuFile)
+        self.servers_menu.setObjectName(_fromUtf8("servers_menu"))
+        self.menuHelp = QtGui.QMenu(self.menubar)
+        self.menuHelp.setObjectName(_fromUtf8("menuHelp"))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtGui.QStatusBar(MainWindow)
+        self.statusbar.setObjectName(_fromUtf8("statusbar"))
+        MainWindow.setStatusBar(self.statusbar)
+        self.new_server = QtGui.QAction(MainWindow)
+        self.new_server.setObjectName(_fromUtf8("new_server"))
+        self.actionTmp = QtGui.QAction(MainWindow)
+        self.actionTmp.setObjectName(_fromUtf8("actionTmp"))
+        self.exit_action = QtGui.QAction(MainWindow)
+        self.exit_action.setObjectName(_fromUtf8("exit_action"))
+        self.actionAbout = QtGui.QAction(MainWindow)
+        self.actionAbout.setObjectName(_fromUtf8("actionAbout"))
+        self.menuFile.addAction(self.servers_menu.menuAction())
+        self.menuFile.addAction(self.new_server)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.exit_action)
+        self.menuHelp.addAction(self.actionAbout)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.tab.setCurrentIndex(0)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "SSQB", None, QtGui.QApplication.UnicodeUTF8))
+        self.tab.setTabText(self.tab.indexOf(self.tab_1), QtGui.QApplication.translate("MainWindow", "Tab 1", None, QtGui.QApplication.UnicodeUTF8))
+        self.clear_button.setText(QtGui.QApplication.translate("MainWindow", "clear", None, QtGui.QApplication.UnicodeUTF8))
+        self.new_button.setText(QtGui.QApplication.translate("MainWindow", "new", None, QtGui.QApplication.UnicodeUTF8))
+        self.query_button.setText(QtGui.QApplication.translate("MainWindow", "query", None, QtGui.QApplication.UnicodeUTF8))
+        self.query_button.setShortcut(QtGui.QApplication.translate("MainWindow", "Shift+Return", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuFile.setTitle(QtGui.QApplication.translate("MainWindow", "File", None, QtGui.QApplication.UnicodeUTF8))
+        self.servers_menu.setTitle(QtGui.QApplication.translate("MainWindow", "Servers", None, QtGui.QApplication.UnicodeUTF8))
+        self.menuHelp.setTitle(QtGui.QApplication.translate("MainWindow", "Help", None, QtGui.QApplication.UnicodeUTF8))
+        self.new_server.setText(QtGui.QApplication.translate("MainWindow", "New Server", None, QtGui.QApplication.UnicodeUTF8))
+        self.new_server.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+N", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionTmp.setText(QtGui.QApplication.translate("MainWindow", "tmp", None, QtGui.QApplication.UnicodeUTF8))
+        self.exit_action.setText(QtGui.QApplication.translate("MainWindow", "Exit", None, QtGui.QApplication.UnicodeUTF8))
+        self.exit_action.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+Q", None, QtGui.QApplication.UnicodeUTF8))
+        self.actionAbout.setText(QtGui.QApplication.translate("MainWindow", "About", None, QtGui.QApplication.UnicodeUTF8))
+

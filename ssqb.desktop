@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=SSQB
+Comment=Super Simple Query Browser - MySQL
+Categories=GNOME;Programming;
+Exec=ssqb
+Icon=ssqb
+Terminal=false
+Type=Application
