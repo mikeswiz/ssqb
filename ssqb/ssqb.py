@@ -172,7 +172,7 @@ class StartQt(QtGui.QMainWindow):
             except:
                 msg = "Awwww. Sorry, that info didn't work."
                 pass
-            QtGui.QMessageBox.information(self, "Connection Test to %s" % tmp['host'], msg)
+            QtGui.QMessageBox.information(widget, "Connection Test to %s" % tmp['host'], msg)
         return callback
     def saveServer(self):
         def callback():
