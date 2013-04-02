@@ -134,6 +134,8 @@ class StartQt(QtGui.QMainWindow):
 
             for field in self.to_add_server:
                 item = QtGui.QLineEdit()
+                if field == "Password":
+                    item.setEchoMode(QtGui.QLineEdit.Password)
                 item.setObjectName(field.lower())
                 label = QtGui.QLabel(item)
                 label.setText(field + ":")
